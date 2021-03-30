@@ -4,15 +4,18 @@
 
     - Display all notes in the left sidebar.
     - Displayed sidebar notes should show the title and a truncated body.
+
+
+    ** {Notetaker} **
+    -Settig up:
+        - We want to keep our state as simple and shallow as possible. 
+        - Concerns 
+            (Overall notes, notes that the user is seeing, displaying title, and truncated body, When clicking a note from the sidebar, display its contents in the right panel.)
+        - Based on the README.md we know that were are receiving an arr of objects. Our state will take a key called notes assigned to an empty arr, which will represent all of our sushi called from the API. 
+        - state defined > fetchNotes() includes setState > lifeCycle invokes fetch on page load
+        - fetched notes from server > executed the fetch inside commponentDidMount > passed notes props to <SideBar/>, <NoteList/>, details accessed and defined in <NoteItem/>
+        
+
     - When clicking a note from the sidebar, display its contents in the right panel.
 
-!1. Sushi list is properly received from the server
-!2. Only 4 sushi are rendered at a time
-
-** {App} **
--Settig up:
-    - We want to keep our state as simple and shallow as possible. 
-    - Concerns 
-        (Overall notes, notes that the user is seeing, displaying title, and truncated body, When clicking a note from the sidebar, display its contents in the right panel.)
-    - Based on the README.md we know that were are receiving an arr of objects. Our state will take a key called notes assigned to an empty arr, which will represent all of our sushi called from the API. 
-    - currentNotes is set to an empty arr to represent what the user is seeing. 
+    

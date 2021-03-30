@@ -11,6 +11,12 @@ import Instructions from './Instructions';
           refactor to get this Content component to work.
 */
 class Content extends Component {
+
+ moveNote = () =>{
+  console.log("hello")
+  }
+
+
   renderContent = () => {
     if (false) {
       return <NoteEditor />;
