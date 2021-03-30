@@ -9,7 +9,7 @@ class NoteContainer extends Component {
 
   state = {
     notes: [],
-    selectedNote: []
+    selectedNote: false
   }
 
   //fire during the fetch
@@ -27,18 +27,21 @@ class NoteContainer extends Component {
       })
   }
 
-  selectNotes = () => {
-    console.log("I select notes")
+  displayNotes = (note) => {
+   // console.log(notes)
+    this.setState({
+      selectedNote : note
+    })
   }
 
   render() {
+    console.log(this.state.selectedNote)
     return (
       <Fragment>
         <Search />
         <div className='container'>
-          {/* <Sidebar notes={this.state.notes} handleClick={this.selectNotes}/> */}
-          <Sidebar notes={this.state.notes} selectedNotes={this.selectNotes}/>
-          <Content />
+          <Sidebar notes={this.state.notes}  selectedNotes={this.displayNotes}/>
+          <Content selectedNote={this.state.selectedNote}/>
         </div>
       </Fragment>
     );

@@ -9,7 +9,7 @@ class Sidebar extends Component {
     return (
       <div className='master-detail-element sidebar'>
         {/* <NoteList notes={this.props.notes} /> */}
-        <NoteList note={this.props.notes} selectedNotes={this.props.selectedNotes}/>
+        <NoteList note={this.props.notes} selectedNotes={this.props.selectedNotes} />
         <button>New</button>
       </div>
     );
