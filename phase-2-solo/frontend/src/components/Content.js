@@ -14,10 +14,10 @@ class Content extends Component {
 
 
   renderContent = () => {
-    if (false) {
+    if (this.props.edit) {
       return <NoteEditor />;
     } else if (this.props.selectedNote) {
-      return <NoteViewer selectedNote={this.props.selectedNote}/>;
+      return <NoteViewer selectedNote={this.props.selectedNote} editNote={this.props.editNote}/>;
     } else {
       return <Instructions />; //default on page load, bc selected note is false
     }

@@ -9,7 +9,8 @@ class NoteContainer extends Component {
 
   state = {
     notes: [],
-    selectedNote: false
+    selectedNote: false,
+    edit: false
   }
 
   //fire during the fetch
@@ -21,21 +22,16 @@ class NoteContainer extends Component {
       })
   }
 
-  // fetchNotes = () => {
-  //   fetch(API)
-  //     .then(resp => resp.json())
-  //     .then(allNotes => {
-  //       this.setState({
-  //         notes: allNotes
-  //       })
-  //     })
-  // }
-
   displayNotes = (selectedNote) => {
    // console.log(notes)
     this.setState({ selectedNote }) 
-    //   selectedNote : note
-    // })
+    //or   selectedNote : note })
+  }
+
+  editNote = () => {
+    console.log("I am an editor")
+    this.setState({edit: true })
+  
   }
 
   render() {
@@ -45,7 +41,7 @@ class NoteContainer extends Component {
         <Search />
         <div className='container'>
           <Sidebar notes={this.state.notes}  selectedNotes={this.displayNotes}/>
-          <Content selectedNote={this.state.selectedNote}/>
+          <Content selectedNote={this.state.selectedNote} editNote={this.editNote} edit={this.state.edit}/>
         </div>
       </Fragment>
     );
