@@ -14,10 +14,6 @@ class NoteContainer extends Component {
 
   //fire during the fetch
   componentDidMount = () => {
-    this.fetchNotes()
-  }
-
-  fetchNotes = () => {
     fetch(API)
       .then(resp => resp.json())
       .then(allNotes => {
@@ -26,6 +22,16 @@ class NoteContainer extends Component {
         })
       })
   }
+
+  // fetchNotes = () => {
+  //   fetch(API)
+  //     .then(resp => resp.json())
+  //     .then(allNotes => {
+  //       this.setState({
+  //         notes: allNotes
+  //       })
+  //     })
+  // }
 
   displayNotes = (note) => {
    // console.log(notes)
