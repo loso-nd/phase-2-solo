@@ -2,6 +2,6 @@
     "notes": [
         { "id": 1, "title": "my first react project", "body": "Plan out project." },
         { "id": 2, "title": "do labs", "body": "Finish react router labs by sunday." },
-        { "id": 1, "title": "walk cat", "body": "Take rose for a walk." }
+        { "id": 3, "title": "walk cat", "body": "Take rose for a walk." }
     ] 
 }

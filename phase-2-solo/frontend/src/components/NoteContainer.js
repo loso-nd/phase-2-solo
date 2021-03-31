@@ -17,9 +17,7 @@ class NoteContainer extends Component {
     fetch(API)
       .then(resp => resp.json())
       .then(allNotes => {
-        this.setState({
-          notes: allNotes
-        })
+        this.setState({ notes: allNotes })
       })
   }
 
@@ -33,11 +31,11 @@ class NoteContainer extends Component {
   //     })
   // }
 
-  displayNotes = (note) => {
+  displayNotes = (selectedNote) => {
    // console.log(notes)
-    this.setState({
-      selectedNote : note
-    })
+    this.setState({ selectedNote }) 
+    //   selectedNote : note
+    // })
   }
 
   render() {

@@ -19,7 +19,7 @@ class Content extends Component {
     } else if (this.props.selectedNote) {
       return <NoteViewer selectedNote={this.props.selectedNote}/>;
     } else {
-      return <Instructions />;
+      return <Instructions />; //default on page load, bc selected note is false
     }
   }
 
